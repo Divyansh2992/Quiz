@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GreenPulse - GreenPulse HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+          <h2 class="m-0 text-primary">
+              <img src="data:image/jpeg;base64,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" style="height:50px;width:50px;position:relative;top:0px;right:15px;">
+          </i>GreenPulse</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+              <a href="index.html" class="nav-item nav-link">HOME</a>
+              <a href="about.html" class="nav-item nav-link">ABOUT</a>
+              <a href="" class="nav-item nav-link">GREEN-FINANCE HUB</a>
+              <a href="credits.html" class="nav-item nav-link">CARBON CREDIT</a>
+              <a href="tourism.html" class="nav-item nav-link">TOURISM</a>
+              <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ECO-FRIENDLY GAMES</a>
+                  <div class="dropdown-menu fade-down m-0">
+                      <a href="bucket ball game/index.html" class="dropdown-item">COLLECT DROPS</a>
+                      <a href="" class="dropdown-item">QUIZ</a>
+                    
+                  </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link active">Contact</a>
+          </div>
+          <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+  </nav>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5">
+      <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+          <img class="img-fluid" src="img/carousel-1.jpg" alt="" />
+          <div
+            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+            style="background: rgba(24, 29, 56, 0.7)"
+          >
+            <div class="container">
+              <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                  <h5
+                    class="text-primary text-uppercase mb-3 animated slideInDown"
+                  >
+                    Best Online Courses
+                  </h5>
+                  <h1 class="display-3 text-white animated slideInDown">
+                    The Best Online Sustainability Platform
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    GreenPulse is your gateway to a greener future, connecting
+                    individuals and organizations committed to environmental
+                    stewardship. Join a vibrant community dedicated to
+                    sustainable living, innovative solutions, and impactful
+                    change. Together, we can make every action count for a
+                    healthier planet.".
+                  </p>
+                  <a
+                    href=""
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                    >Read More</a
+                  >
+                  <a
+                    href=""
+                    class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+          <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+          <div
+            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+            style="background: rgba(24, 29, 56, 0.7)"
+          >
+            <div class="container">
+              <div class="row justify-content-start">
+                <div class="col-sm-10 col-lg-8">
+                  <h5
+                    class="text-primary text-uppercase mb-3 animated slideInDown"
+                  >
+                    Best Online Courses
+                  </h5>
+                  <h1 class="display-3 text-white animated slideInDown">
+                    Best Investment Strategies in GreenFinance
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    GreenFinance connects you with investment opportunities that
+                    drive environmental impact. Invest in projects that align
+                    with your values and support a sustainable future. Grow your
+                    wealth while making a positive difference for the planet.
+                  </p>
+                  <a
+                    href=""
+                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
+                    >Read More</a
+                  >
+                  <a
+                    href=""
+                    class="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item text-center pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                <h5 class="mb-3">ONLINE ECOGAMES</h5>
+                <p>
+                  Engage with interactive online games to boost your
+                  sustainability knowledge and make a difference through fun and
+                  educational experiences
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item text-center pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                <h5 class="mb-3">Online Investment Strategies</h5>
+                <p>
+                  Enhance your green finance knowledge with informative and
+                  engaging videos that simplify sustainable investing and its
+                  impact on the planet.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item text-center pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                <h5 class="mb-3">Carbon Credit Calculator and MarketPlace</h5>
+                <p>
+                  Calculate and purchase carbon credits to offset your emissions
+                  and support sustainability
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="service-item text-center pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                <h5 class="mb-3">
+                  Transform your lifestyle with our platform's tools and
+                  resources, and contribute to a healthier planet for future
+                  generations
+                </h5>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div
+            class="col-lg-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="min-height: 400px"
+          >
+            <div class="position-relative h-100">
+              <img
+                class="img-fluid position-absolute w-100 h-100"
+                src="img/about.jpg"
+                alt=""
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+            <h6 class="section-title bg-white text-start text-primary pe-3">
+              About Us
+            </h6>
+            <h1 class="mb-4">Welcome to GreenPulse</h1>
+            <p class="mb-4">
+              GreenPulse is an innovative platform dedicated to promoting
+              sustainable living and green finance. It empowers users to make
+              environmentally conscious financial decisions through engaging
+              online awareness games, educational resources, and practical
+              tools. 
+            </p>
+            <p class="mb-4">
+                By fostering a community of eco-conscious individuals,
+                GreenPulse aims to drive positive environmental change and
+                contribute to a greener, more sustainable future.
+            </p>
+            <div class="row gy-2 gx-4 mb-4">
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Online Games Symbolising Sustainability
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Best Invest Strategies
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i
+                  >Marketplace to Buy Carbon credits
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Calculator to CalculateCarbon Footprints
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>sustainable Tourism Activities
+                </p>
+              </div>
+              
+            </div>
+            <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Categories Start -->
+    <div class="container-xxl py-5 category">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Categories
+          </h6>
+          <h1 class="mb-5">Green Finance Hub</h1>
+        </div>
+        <div class="row g-3">
+          <div class="col-lg-7 col-md-6">
+            <div class="row g-3">
+              <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                <a class="position-relative d-block overflow-hidden" href="">
+                  <img class="img-fluid" src="img/cat-1.jpg" alt="" />
+                  <div
+                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    style="margin: 1px"
+                  >
+                    <h5 class="m-0">Intro to GreenFinance</h5>
+                    <small class="text-primary">49 Courses</small>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
+                <a class="position-relative d-block overflow-hidden" href="">
+                  <img class="img-fluid" src="img/cat-2.jpg" alt="" />
+                  <div
+                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    style="margin: 1px"
+                  >
+                    <h5 class="m-0">sustainable Invest Strategies</h5>
+                    <small class="text-primary">49 Courses</small>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
+                <a class="position-relative d-block overflow-hidden" href="">
+                  <img class="img-fluid" src="img/cat-3.jpg" alt="" />
+                  <div
+                    class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                    style="margin: 1px"
+                  >
+                    <h5 class="m-0">Environment Risk Management</h5>
+                    <small class="text-primary">49 Courses</small>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 col-md-6 wow zoomIn"
+            data-wow-delay="0.7s"
+            style="min-height: 350px"
+          >
+            <a class="position-relative d-block h-100 overflow-hidden" href="">
+              <img
+                class="img-fluid position-absolute w-100 h-100"
+                src="img/cat-4.jpg"
+                alt=""
+                style="object-fit: cover"
+              />
+              <div
+                class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
+                style="margin: 1px"
+              >
+                <h5 class="m-0">Personal Finance and Sustainability</h5>
+                <small class="text-primary">49 Courses</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Categories Start -->
+
+    <!-- Courses Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Courses
+          </h6>
+          <h1 class="mb-5">Popular Courses</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="course-item bg-light">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="img/course-1.jpg" alt="" />
+                <div
+                  class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                    style="border-radius: 30px 0 0 30px"
+                    >Read More</a
+                  >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                    style="border-radius: 0 30px 30px 0"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+              <div class="text-center p-4 pb-0">
+                <h3 class="mb-0">$149.00</h3>
+                <div class="mb-3">
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small>(123)</small>
+                </div>
+                <h5 class="mb-4">
+                  Sustainable Investing
+                </h5>
+              </div>
+              <div class="d-flex border-top">
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-user-tie text-primary me-2"></i>John
+                  Doe</small
+                >
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
+                >
+                <small class="flex-fill text-center py-2"
+                  ><i class="fa fa-user text-primary me-2"></i>30
+                  Students</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="course-item bg-light">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="img/course-2.jpg" alt="" />
+                <div
+                  class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                    style="border-radius: 30px 0 0 30px"
+                    >Read More</a
+                  >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                    style="border-radius: 0 30px 30px 0"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+              <div class="text-center p-4 pb-0">
+                <h3 class="mb-0">$149.00</h3>
+                <div class="mb-3">
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small>(123)</small>
+                </div>
+                <h5 class="mb-4">
+                  Green Banking
+                </h5>
+              </div>
+              <div class="d-flex border-top">
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-user-tie text-primary me-2"></i>John
+                  Doe</small
+                >
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
+                >
+                <small class="flex-fill text-center py-2"
+                  ><i class="fa fa-user text-primary me-2"></i>30
+                  Students</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="course-item bg-light">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="img/course-3.jpg" alt="" />
+                <div
+                  class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                    style="border-radius: 30px 0 0 30px"
+                    >Read More</a
+                  >
+                  <a
+                    href="#"
+                    class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                    style="border-radius: 0 30px 30px 0"
+                    >Join Now</a
+                  >
+                </div>
+              </div>
+              <div class="text-center p-4 pb-0">
+                <h3 class="mb-0">$149.00</h3>
+                <div class="mb-3">
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small class="fa fa-star text-primary"></small>
+                  <small>(123)</small>
+                </div>
+                <h5 class="mb-4">
+                  Green Technologies and Inovations
+                </h5>
+              </div>
+              <div class="d-flex border-top">
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-user-tie text-primary me-2"></i>John
+                  Doe</small
+                >
+                <small class="flex-fill text-center border-end py-2"
+                  ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
+                >
+                <small class="flex-fill text-center py-2"
+                  ><i class="fa fa-user text-primary me-2"></i>30
+                  Students</small
+                >
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="course-item bg-light">
+                  <div class="position-relative overflow-hidden">
+                    <img class="img-fluid" src="img/course-3.jpg" alt="" />
+                    <div
+                      class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4"
+                    >
+                      <a
+                        href="#"
+                        class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end"
+                        style="border-radius: 30px 0 0 30px"
+                        >Read More</a
+                      >
+                      <a
+                        href="#"
+                        class="flex-shrink-0 btn btn-sm btn-primary px-3"
+                        style="border-radius: 0 30px 30px 0"
+                        >Join Now</a
+                      >
+                    </div>
+                  </div>
+                  <div class="text-center p-4 pb-0">
+                    <h3 class="mb-0">$149.00</h3>
+                    <div class="mb-3">
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small class="fa fa-star text-primary"></small>
+                      <small>(123)</small>
+                    </div>
+                    <h5 class="mb-4">
+                      Climate Risks and Financial Market
+                    </h5>
+                  </div>
+                  <div class="d-flex border-top">
+                    <small class="flex-fill text-center border-end py-2"
+                      ><i class="fa fa-user-tie text-primary me-2"></i>John
+                      Doe</small
+                    >
+                    <small class="flex-fill text-center border-end py-2"
+                      ><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small
+                    >
+                    <small class="flex-fill text-center py-2"
+                      ><i class="fa fa-user text-primary me-2"></i>30
+                      Students</small
+                    >
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Courses End -->
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Instructors
+          </h6>
+          <h1 class="mb-5">Expert Instructors</h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item bg-light">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/team-1.jpg" alt="" />
+              </div>
+              <div
+                class="position-relative d-flex justify-content-center"
+                style="margin-top: -23px"
+              >
+                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Kirtan Sodagar</h5>
+                <small>Member</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-item bg-light">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/team-2.jpg" alt="" />
+              </div>
+              <div
+                class="position-relative d-flex justify-content-center"
+                style="margin-top: -23px"
+              >
+                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Divyansh VIjay</h5>
+                <small>Member</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="team-item bg-light">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/team-3.jpg" alt="" />
+              </div>
+              <div
+                class="position-relative d-flex justify-content-center"
+                style="margin-top: -23px"
+              >
+                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Manan Velani</h5>
+                <small>Member</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="team-item bg-light">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/team-4.jpg" alt="" />
+              </div>
+              <div
+                class="position-relative d-flex justify-content-center"
+                style="margin-top: -23px"
+              >
+                <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-sm-square btn-primary mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Kirtan Sodagar</h5>
+                <small>Member</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="text-center">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Testimonial
+          </h6>
+          <h1 class="mb-5">Our Students Say!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+          <div class="testimonial-item text-center">
+            <img
+              class="border rounded-circle p-2 mx-auto mb-3"
+              src="img/testimonial-1.jpg"
+              style="width: 80px; height: 80px"
+            />
+            <h5 class="mb-0">Priya Sharma</h5>
+            <p>ENvironment Analyst</p>
+            <div class="testimonial-text bg-light text-center p-4">
+              <p class="mb-0">
+                GreenPulse empowered me to make eco-friendly financial decisions effortlessly
+              </p>
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img
+              class="border rounded-circle p-2 mx-auto mb-3"
+              src="img/testimonial-2.jpg"
+              style="width: 80px; height: 80px"
+            />
+            <h5 class="mb-0">Rohan Patel</h5>
+            <p>CEO,Cleanovate</p>
+            <div class="testimonial-text bg-light text-center p-4">
+              <p class="mb-0">
+                As a small business owner, GreenPulse's insights have been invaluable.
+              </p>
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img
+              class="border rounded-circle p-2 mx-auto mb-3"
+              src="img/testimonial-3.jpg"
+              style="width: 80px; height: 80px"
+            />
+            <h5 class="mb-0">Amit Verma</h5>
+            <p>Weather Predictor</p>
+            <div class="testimonial-text bg-light text-center p-4">
+              <p class="mb-0">
+                The platform's educational resources are top-notch and incredibly informative.
+              </p>
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img
+              class="border rounded-circle p-2 mx-auto mb-3"
+              src="img/testimonial-4.jpg"
+              style="width: 80px; height: 80px"
+            />
+            <h5 class="mb-0">Anita Desai</h5>
+            <p>Manager, NGO</p>
+            <div class="testimonial-text bg-light text-center p-4">
+              <p class="mb-0">
+                GreenPulse's tools have helped me reduce my carbon footprint through smart financial choices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="container py-5">
+          <div class="row g-5">
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Quick Link</h4>
+                  <a class="btn btn-link" href="">About Us</a>
+                  <a class="btn btn-link" href="">Contact Us</a>
+                  <a class="btn btn-link" href="">Privacy Policy</a>
+                  <a class="btn btn-link" href="">Terms & Condition</a>
+                  <a class="btn btn-link" href="">FAQs & Help</a>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Contact</h4>
+                  <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Meera Market,Mumbai, India</p>
+                  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 3456789047</p>
+                  <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                  <div class="d-flex pt-2">
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Gallery</h4>
+                  <div class="row g-2 pt-2">
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_one.jpeg" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_two.jpeg" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_three.jpeg" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_two.jpeg" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_three.jpeg" alt="">
+                      </div>
+                      <div class="col-4">
+                          <img class="img-fluid bg-light p-1 size" src="img/img_one.jpeg" alt="">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                  <h4 class="text-white mb-3">Newsletter</h4>
+                  <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                  <div class="position-relative mx-auto" style="max-width: 400px;">
+                      <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                      <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="copyright">
+              <div class="row">
+                  <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                      &copy; <a class="border-bottom" href="#">GreenPulse</a>, All Right Reserved.
+
+                      <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                      <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                      Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a> -->
+                  </div>
+                  <div class="col-md-6 text-center text-md-end">
+                      <div class="footer-menu">
+                          <a href="">Home</a>
+                          <a href="">Cookies</a>
+                          <a href="">Help</a>
+                          <a href="">FQAs</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Score</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Final Score</h1>
+        <p>Your final score is: <%= finalScore %></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Your Answer</th>
+                    <th>Correct Answer</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(result => { %>
+                    <tr>
+                        <td><%= result.question %></td>
+                        <td><%= result.userAnswer %></td>
+                        <td><%= result.correctAnswer %></td>
+                        <td>
+                            <%= result.isCorrect ? '✔️ Correct' : '❌ Wrong' %>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <form action="/start-again" method="POST">
+            <button type="submit">Start Again</button>
+        </form>
+    </div>
+</body>
+</html>

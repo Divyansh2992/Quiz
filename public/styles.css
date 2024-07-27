@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url('background.jpg');
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #32CD32;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.options-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between options */
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    flex-basis: calc(50% - 20px); /* Makes sure two options fit in one row */
+}
+
+.option label {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #32CD32;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #32CD32;
+}
+
+a {
+    color: #32CD32;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the results table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Styles for the button rows */
+.button-row {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 20px; /* Adds space between buttons */
+    margin-top: 20px; /* Adds space above the button row */
+}
+
+/* Styles for individual buttons */
+.button-row button {
+    background-color: #32CD32;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Same padding for all buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Consistent font size */
+    line-height: 1.5; /* Ensures text is vertically aligned */
+    min-width: 120px; /* Ensures all buttons have the same minimum width */
+    text-align: center; /* Center the text horizontally */
+}
+
+.button-row button:hover {
+    background-color: #32CD32;
+}
+
+/* Specific styles for the back to home button */
+.back-home-button {
+    position: relative;
+    top:19px;
+    height:25px;
+    background-color: #32CD32;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.back-home-button:hover {
+    background-color: #32CD32;
+    text-decoration: none;
+}
+
