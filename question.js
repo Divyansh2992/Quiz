@@ -5,6 +5,7 @@ const connection=mysql.createConnection({
     password:"123456",
     database:"quiz_game",
 });
+const BASE_URL=process.env.BASE_URL;
 
 connection.connect(function(err) {
     if (err) {
